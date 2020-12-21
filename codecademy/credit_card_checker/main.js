@@ -119,7 +119,12 @@ const idInvalidCardCompanies = arr => {
   
   let x = idInvalidCardCompanies(invalidCards);
   console.log(x);
+// tested on my cards
+let myDebitCard = [4,9,2,1,7,1,7,3,9,7,7,4,8,5,1,3];
+let myCreditCard = [5,4,2,1,5,7,3,0,3,3,8,0,6,7,0,9];
+ let myInvalid = [myDebitCard,myCreditCard];
 
+console.log(idInvalidCardCompanies(myInvalid));
 
 
 
