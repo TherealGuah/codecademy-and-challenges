@@ -99,4 +99,4 @@ while (survivors.length <= 30) {
 // console.log(pAequor1.willLikelySurvive());
 
 
-console.log(survivors);
+// console.log(survivors);
