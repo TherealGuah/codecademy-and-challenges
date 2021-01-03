@@ -37,59 +37,66 @@
                                 <a href="#inputAttributes">value / readonly / disabled / size / maxlength / min / max / multiple / pattern / placeholder / required / step / autofocus / height / width / list / type</a></td>
                         </tr>
                         <tr>
-                            <td>&lt;label&gt;</td>
+                            <td><span class="code">&lt;label&gt;</span></td>
                             <td>Defines a label for several form elements. Useful for screen-reader users as it reads out loud when the inout element comes in focus.</td>
                             <td> 
                                 <a href="#labelAttributes"> for </a>
                             </td>
                         </tr>
                         <tr>
-                            <td>&lt;select&gt;</td>
+                            <td><span class="code">&lt;select&gt;</span></td>
                             <td>Defines a drop-down list for selection.</td>
                             <td> 
                                <a href="#selectAttributes">autocomplete / autofocus / disabled / form / multiple / name / required / size</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>&lt;textarea&gt;</td>
+                            <td><span class="code">&lt;textarea&gt;</span></td>
                             <td>A multi-line input field is defined.</td>
                             <td>
                                 <a href="#textareaAttributes">autocapitalize / autocomplete / autofocus / cols / disabled / form / maxlength / minlength / name / placeholder / readonly / required / rows / spellcheck / wrap</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>&lt;button&gt;</td>
+                            <td><span class="code">&lt;button&gt;</span></td>
                             <td>Defines a clickable button.</td>
                             <td>
                                 <a href="#buttonAttributes">autofocus / autocomplete / disbled / form / formaction / formenctype / formmethod / formnovalidate / formtarget / name/ type / value</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>&lt;fieldset&gt;</td>
+                            <td><span class="code">&lt;fieldset&gt;</span></td>
                             <td>Used to group related data together.</td>
                             <td>
                                 <a href="#fieldsetAttributes">disabled / form / name</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>&lt;legend&gt;</td>
+                            <td><span class="code">&lt;legend&gt;</span></td>
                             <td>Defines the caption for the field set.</td>
-                            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend#Attributes" target="_blank">Includes only global elements</a></td>
+                            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend#Attributes" target="_blank">Includes global attributes</a></td>
                         </tr>
                         <tr>
-                            <td>&lt;datalist&gt;</td>
+                            <td><span class="code">&lt;datalist&gt;</span></td>
                             <td>Specifies a list of pre-defined options for the input.</td>
-                            <td></td>
+                            <td>
+                                Contains a set of &lt;option&gt; elements that represent the permissible or recommended options available to choose from within other controls.
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist#Attributes" target="_blank">Includes global attributes.</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>&lt;output&gt;</td>
+                            <td><span class="code">&lt;output&gt;</span></td>
                             <td>Represents the result of a calculation </td>
-                            <td></td>
+                            <td>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output#Attributes" target="_blank">Includes global attributes</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>&lt;options&gt;</td>
-                            <td>Defines the options available to select from.</td>
-                            <td></td>
+                            <td><span class="code">&lt;options&gt;</span></td>
+                            <td>Used to define an item contained in a &lt;select&gt;, an &lt;optgroup&gt;, or a &lt;datalist&gt; element.</td>
+                            <td>
+                                <a href="#optionsAttributes">disabled / label / selected / value</a>
+                            </td>
                         </tr>
                         
                     </tbody>
@@ -478,50 +485,23 @@
                 </Table>
                 <p><a href="#formTags">To the Top</a></p>
             </article>
-            <!-- <datalist> attributes -->
-            <article id=datalistAttributes>
-                <h2>&lt;datalist&gt; Attributes</h2>
-                <Table>
-                    <thead>
-                        <th>Attribute</th>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Reference</th> 
-                    </thead>
-                    <tbody>
-                        <tr></tr>
-                    </tbody>
-                </Table>
-                <p><a href="#formTags">To the Top</a></p>
-            </article>
-            <!-- <output> attributes -->
-            <article id="outputAttributes">
-                <h2>&lt;output&gt; Attributes</h2>
-                <Table>
-                    <thead>
-                        <th>Attribute</th>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Reference</th> 
-                    </thead>
-                    <tbody>
-                        <tr></tr>
-                    </tbody>
-                </Table>
-                <p><a href="#formTags">To the Top</a></p>
-            </article>
             <!-- <options> attributes -->
             <article id="optionsAttributes">
                 <h2>&lt;options&gt; Attributes</h2>
                 <Table>
                     <thead>
                         <th>Attribute</th>
-                        <th>Name</th>
                         <th>Description</th>
                         <th>Reference</th> 
                     </thead>
                     <tbody>
-                        <tr></tr>
+                        <tr>
+                            <td><span class="code">disabled / label / selected / value</span></td>
+                            <td>List of attributes. Doesn't include global attributes.</td>
+                            <td>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option#Attributes" target="_blank">MDN.org</a>
+                            </td>
+                        </tr>
                     </tbody>
                 </Table>
                 <p><a href="#formTags">To the Top</a></p>
