@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cheat Sheet Project</title>
+    <title>HTML5 Form Reference Sheet</title>
     <link rel="stylesheet" href="./resources/styleSheet.css">
 </head>
     <body>
         <header>
-            <h1>HTML Form Reference</h1>
+            <h1>HTML Form Reference Sheet</h1>
         </header>
         <main>
-            <article> 
+            <article id="formTags"> 
                 <h2>Form Tags</h2>   
                 <table>
                     <thead>
@@ -26,7 +26,7 @@
                             <td><span class="code">&lt;form&gt;</span></td>
                             <td>Form</td>
                             <td>Wrapper element for the entirety of the form.</td>
-                            <td>action / method</td>
+                            <td><a href="#formAttributes">accept-charset / action / autocomplete / method / name / novalidate / rel / target</a></td>
                             <td>
                                 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" target="_blank">MDN</a><br>
                                 <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">W3Schools</a>
@@ -35,37 +35,66 @@
                         <tr>
                             <td><span class="code">&lt;input&gt;</span></td>
                             <td>Input</td>
-                            <td>Input tag is used to collect the users information. Different <span class="code">type</span> attribute values will change the way informations is collected.</td>
-                            <td>type / name / value</td>
-                            <td>
-                                <a href="" target="_blank"></a><br>
-                                <a href="" target="_blank"></a>
-                            </td>
+                            <td>Input tag is used to collect the users information. Different <span class="code">type</span> attribute values will change the way information is collected.</td>
+                            <td><a href="#inputAttributes">value / readonly / disabled / size / maxlength / min / max / multiple / pattern / placeholder / required / step / autofocus / height / width / list</a></td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td></td>
-                            <td></td>
+                            <td>&lt;label&gt;</td>
+                            <td>Label</td>
+                            <td>Used to define </td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>4</td>
-                            <td></td>
+                            <td>&lt;select&gt;</td>
                             <td></td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>5</td>
+                            <td>&lt;textarea&gt;</td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>6</td>
+                            <td>&lt;button&gt;</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;fieldset&gt;</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;legend&gt;</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;datalist&gt;</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;output&gt;</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;options&gt;</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;potgroup&gt;</td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
             </article>
-            <br>
-            <article>
-                <h2>Form Attributes</h2>
+            <!-- <form> attributes -->
+            <article id="formAttributes">
+                <h2>&lt;form&gt; Attributes</h2>
                 <table>
                     <thead>
                         <th>Attribute</th>
@@ -75,28 +104,288 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><span class="code">action=""</span></td>
-                            <td>Action</td>
-                            <td>Attribute of <span class="code">&lt;form&gt;</span> used to determine the action to perform on validation of the form.</td>
-                            <td><a href=""></a>MDN</td>
-                            <td><a href="https://www.w3schools.com/html/html_forms_attributes.asp">W3Schools</a></td>
-                        </tr>
-                        <tr>
-                            <td><span class="code">method=""</span></td>
-                            <td>Method</td>
-                            <td>Attribute of <span class="code">&lt;form&gt;</span> that assigns a HTTP verb to the HTTP request.</td>
+                            <td><span class="code">accept-charset=""</span></td>
+                            <td>Accept Character-Set</td>
+                            <td>specifies the character encodings that are to be used for the form submission.</td>
                             <td>
-                                <a href="">MDN</a>
-                                <a href="https://www.w3schools.com/html/html_forms_attributes.asp">W3Schools</a>
+                                <a href="https://www.w3schools.com/tags/att_form_accept_charset.asp" target="_blank">W3Schools</a>
                             </td>
                         </tr>
-                        <td><span class="code">autocomplete=""</span></td>
-                        <td>Auto Complete</td>
-                        <td>Set to "on"/"off". The browser "may"/"may not" auto complete the entries.</td>
-                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields">MDN reference</a></td>
-                    </tr>
+                        <tr>
+                            <td><span class="code">action=""</span></td>
+                            <td>Action</td>
+                            <td>Specifies where to send the form-data when a form is submitted</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_action.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">autocomplete=""</span></td>
+                            <td>Auto Complete</td>
+                            <td>Set to "on"/"off". The browser "may"/"may not" auto complete the entries.</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_autocomplete.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                            <td><span class="code">method=""</span></td>
+                            <td>Method</td>
+                            <td>Assigns a HTTP verb to the HTTP request.</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_method.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">name=""</span></td>
+                            <td>Name</td>
+                            <td>Specifies the name of the form.</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_name.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">novalidate=""</span></td>
+                            <td>No Validate</td>
+                            <td>It specifies that the form-data (input) should not be validated when submitted if present.</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_novalidate.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">rel=""</span></td>
+                            <td>Relation</td>
+                            <td>Specifies the relationship between the current document and the linked document.</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_rel.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">target=""</span></td>
+                            <td>Target</td>
+                            <td>Specifies where to receive the response that is received after submiting the form.</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_target.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>    
                     </tbody>
                 </table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <input> attributes -->
+            <article id="inputAttributes">
+                <h2>&lt;input&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">value</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">readonly</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">disabled</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">size</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">maxlength</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">min/max</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">multiple</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">pattern</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">placeholder</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">required</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">step</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">autofocus</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">height/width</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">list</span></td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <label> attributes -->
+            <article id="labelAttributes">
+                <h2>&lt;label&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <select> attributes -->
+            <article id="selectAttributes">
+                <h2>&lt;select&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <textarea> attributes -->
+            <article id="textareaAttributes">
+                <h2>&lt;textarea&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <button> attributes -->
+            <article id="buttonAttributes">
+                <h2>&lt;button&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>    
+            <!-- <fieldset> attributes -->
+            <article id="fieldsetAttributes">
+                <h2>&lt;fieldset&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <legend> attributes -->
+            <article id="legendAttributes">
+                <h2>&lt;legend&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <datalist> attributes -->
+            <article id=datalistAttributes>
+                <h2>&lt;datalist&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <output> attributes -->
+            <article id="outputAttributes">
+                <h2>&lt;output&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <options> attributes -->
+            <article id="optionsAttributes">
+                <h2>&lt;options&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <potgroup> attributes -->
+            <article id="potgroupAttributes">
+                <h2>&lt;potgroup&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
             </article>
         </main>
         <footer>
