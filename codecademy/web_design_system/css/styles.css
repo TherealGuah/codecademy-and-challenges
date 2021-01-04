@@ -1,4 +1,4 @@
-
+/* Universal styles */
 header {
     background-color: cadetblue;
     color: cornsilk;
@@ -7,7 +7,6 @@ header {
 }
 body {
     background-color: whitesmoke;
-    background-image: url("colors.jpeg");
 }
 h1 {
     text-align: center;
@@ -19,11 +18,12 @@ section {
     border-bottom: 1px solid black;
     width: 80%;
     margin: 3rem auto;
+    max-width: 1000px;
 
 }
 section h2 {
     font-size: 1.5rem;
-    color: gray;
+    color: rgb(100, 100, 100);
     margin: 1rem auto;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -32,8 +32,6 @@ section h2 {
 .content {
     text-align: center;
     margin: 1rem auto;
-    
-    background-color: whitesmoke;
 }
 .content div {
     width: 45%; 
@@ -45,13 +43,16 @@ section h2 {
     font-size: 1rem;
     margin: 1rem auto;
 }
+
+/* Styles for <section id="colors"> */
+
 .cornsilk {
     background-color: rgb(255,248,220);
     color: black;
     border: 2px solid lightgray;
 }
 .gray {
-    background-color: rgb(128,128,128);
+    background-color: rgb(100,100,100);
     color:whitesmoke;
     border: 2px solid lightgray;
 }
@@ -70,3 +71,17 @@ section h2 {
     color: white;
     border: 2px solid lightgray;
 }
+#colors {
+    background-color: whitesmoke;
+    background-image: url("../images/colors.jpeg");
+}
+
+/* Styles for <section id="fonts"> */
+
+#fonts{
+    background-color: white;
+}
+
+
+
+/* Styles for <section id="textstyles"> */
