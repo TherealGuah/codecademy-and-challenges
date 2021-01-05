@@ -1,0 +1,43 @@
+/* Serif */
+@font-face {
+    font-family: "Noto";
+    src: 
+        url("./fonts/Noto_serif/NotoSerif-Regular.ttf") format("truetype"),
+        url("./fonts/Noto_serif/NotoSerif-Bold.ttf") format("truetype"),
+        url("./fonts/Noto_serif/NotoSerif-Italic.ttf") format("truetype"),
+        url("./fonts/Noto_serif/NotoSerif-BoldItalic.ttf") format("truetype");
+        
+}
+
+/* Sans-Serif */
+
+@font-face {
+    font-family: "Roboto";
+    src: 
+        url("./fonts/Roboto_sans/Roboto-Regular.ttf") format("truetype"),
+        url("./fonts/Roboto_sans/Roboto-Bold.ttf") format("truetype"),
+        url("./fonts/Roboto_sans/Roboto-Italic.ttf") format("truetype"),
+        url("./fonts/Roboto_sans/Roboto-BoldItalic.ttf") format("truetype");
+        
+}
+
+/* Monospace */
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: 
+        url("./fonts/Source_Code_Pro_Monspace/SourceCodePro-Regular.ttf") format("truetype"),
+        url("./fonts/Source_Code_Pro_Monspace/SourceCodePro-Bold.ttf") format("truetype"),
+        url("./fonts/Source_Code_Pro_Monspace/SourceCodePro-Italic.ttf") format("truetype"),
+        url("./fonts/Source_Code_Pro_Monspace/SourceCodePro-BoldItalic.ttf") format("truetype");
+        
+}
+
+/* Display */
+
+@font-face {
+    font-family: "Bangers";
+    src: 
+        url("./fonts/Bangers_display/Bangers-Regular.ttf") format("truetype");
+        
+}
