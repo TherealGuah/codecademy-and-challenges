@@ -33,6 +33,7 @@ section h2 {
     margin-left: 1rem;
     margin-right: 1rem;
     border-bottom: thin solid gray;
+    font-family: "Noto";
 }
 
 .content {
@@ -117,3 +118,4 @@ section h2 {
     font-style: italic;
 }
 /* Styles for <section id="textstyles"> */
+
