@@ -118,4 +118,61 @@ section h2 {
     font-style: italic;
 }
 /* Styles for <section id="textstyles"> */
+#textstyles{
+    background-color: white;
+    background-image: url("../images/text_size.jpg");
+    opacity: 0.8;
+}
 
+#textstyles div {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin: 1rem;
+}
+#textstyles ul {
+    text-align: left;
+    list-style-type: square;
+    margin: 1rem;
+}
+#textstyles p{
+    text-align: left;    
+}
+#textstyles h2 {
+    color:whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+}
+#h1 {
+    font-family: "Bangers";
+    font-size: 2rem;
+}
+#h2 {
+    font-family: "Noto";
+    font-size: 1.5rem;
+}
+#h3 {
+    font-size: 1.3rem;
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: bold;
+}
+#textstyles .content div {
+    background-color: white;
+    padding:1rem;
+    border: 2px solid lightgray;
+    border-radius: 2%;
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(100,100,100);
+    color: rgb(255,248,220);
+    padding: 2rem;
+    font-weight: bold;
+}
+
+footer li {
+    display: inline-block;
+    margin: auto 1.5rem;
+}
