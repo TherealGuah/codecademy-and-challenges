@@ -80,6 +80,8 @@ section h2 {
 #colors {
     background-color: whitesmoke;
     background-image: url("../images/colors.jpeg");
+    background-position: center;
+    background-size: cover;
 }
 
 /* Styles for <section id="fonts"> */
@@ -122,6 +124,8 @@ section h2 {
     background-color: white;
     background-image: url("../images/text_size.jpg");
     opacity: 0.8;
+    background-position: center;
+    background-size: cover;
 }
 
 #textstyles div {
