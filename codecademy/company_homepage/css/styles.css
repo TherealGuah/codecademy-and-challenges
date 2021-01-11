@@ -133,22 +133,33 @@ main {
     border-top: 1px solid lightgray;
     color: rgba(28,86,111, 1);
     display: flex;
-    justify-content:center; 
+    justify-content: center; 
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
 #employees figure {
     width: 100%;
-    margin: 20px;
+    margin: 50px 50px;
+    text-align: center;
+}
+#employees img {
+    width: 800px;
 }
 figcaption {
     text-align: center;
     margin: 10px auto;
     margin-top: 20px;
 }
-.left, .right {
+#left, #right {
     margin: auto 40px;
 }
+#right:hover, #left:hover {
+    text-decoration: underline;
+}
+#left {
+    display: none;
+}
+
 footer {
     background-color: rgba(28,86,111, 1);  
 }

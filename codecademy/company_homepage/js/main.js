@@ -50,4 +50,5 @@ const nextElement = document.getElementById('right');
 
 // event listeners for both elements
 nextElement.addEventListener('click', changePicture);
+setInterval(changePicture, 10000);
 //previousElement.addEventListener('click',changePicture);
