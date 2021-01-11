@@ -1,7 +1,197 @@
+/* Universal styles */
 html {
     font-family: Noto, Verdana, Geneva, Tahoma, sans-serif ;
+    
 }
-
+body {
+    color: rgb(239, 229, 28, 1);
+}
 h1, h2, h3 {
     font-family: Merriweather, Georgia, 'Times New Roman', Times, serif;
+}
+h2 {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+}
+h3 {
+    font-size: 1.25rem;
+    text-align: left;
+    margin: 5px 10px;
+}
+p {
+    margin: 5px;
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid lightgray;
+    background-color: rgba(28,86,111, 1);
+    padding-bottom: 20px;
+}
+header i {
+    font-size: 4rem;
+}
+header nav ul li {
+    display: inline-block;
+    margin: auto 5px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+}
+main {
+    display: grid;
+    grid-template-areas:
+        "banner banner banner banner"
+        "about products products products"
+        "employees employees employees employees";
+        grid-template-columns: repeat(4, 1fr);
+        
+}       
+
+/* banner section */
+#banner {
+    grid-area: banner;
+    display: grid;
+    grid-template: repeat(2, 0.5fr) repeat(3, 1fr) repeat(2, 0.5fr) / repeat(2, 0.5fr) repeat(3, 1fr) repeat(2, 0.5fr);
+    align-items:center;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+
+}
+#banner img {
+    grid-area: 2 / 2 / 7 / 7;
+}
+#banner h1 {
+    grid-area: 4 / 1 / 5 / span 7;
+    z-index: 2;
+    background-color: white;
+    color: rgb(28,86,111);
+    font-size: 3rem;
+}
+
+
+/* About Section */
+#about {
+    grid-area: about;
+    background-color: rgb(28,86,111);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#about img {
+    margin: 40px auto;
+}
+
+/* Products Section */
+#products {
+    grid-area: products;
+    color: rgba(28,86,111, 1);
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: 1 1 300px;
+    justify-content: space-around;
+    margin: 40px auto;
+    
+
+}
+#products div {
+    max-width: 300px;
+    border: 1px solid rgb(28,86,111);
+    margin: 5px auto;
+    max-height: 400px;
+    align-self: center;
+    
+}
+#products img {
+    border-top:1px solid rgba(28,86,111, 1);
+    border-bottom:1px solid rgba(28,86,111, 1);
+    
+}
+#products a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+
+} 
+/* Employees Section */
+#employees {
+    grid-area: employees;
+    border-top: 1px solid lightgray;
+    color: rgba(28,86,111, 1);
+    display: flex;
+    justify-content:center; 
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+#employees figure {
+    width: 100%;
+    margin: 20px;
+}
+figcaption {
+    text-align: center;
+    margin: 10px auto;
+    margin-top: 20px;
+}
+.left, .right {
+    margin: auto 40px;
+}
+footer {
+    background-color: rgba(28,86,111, 1);  
+}
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+footer li {
+    display: inline-block;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 805px) {
+    main {
+        grid-template-areas: 
+            "banner banner banner  banner"
+            "about about about about"
+            "products products products products"
+            "employees employees employees employees";
+    }
+    #banner img {
+        grid-area: 1 / 1 / span 7 / span 7;
+    }
+    #banner h1 {
+        grid-area: 4 / 1 / 5 / span 7;
+        z-index: 2;
+    }
+    #about img {
+        display: none;
+    }
+}
+
+
+/* Mobile version below 425px wide portrait */
+@media only screen and (max-width: 500px) {
+
+    html {
+        font-size: 8px;
+    }
+    header {
+        height: 75px;
+    }
+
 }

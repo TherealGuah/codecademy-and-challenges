@@ -7,30 +7,83 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <!-- centered nav bar at the top -->
+        <h2><a href="main.html"><i class="fas fa-paw"></i> Paw Foundation</a></h2>
         <nav>
             <ul>
-                <li>Who are We</li>
-                <li>What we do</li>
-                <li>Meet the team</li>
+                <li><a href="#about">Who are We</a></li>
+                <li><a href="#products">What we do</a></li>
+                <li><a href="#employees">Meet the team</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <!-- banner with image and logo -->
         <section id="banner">
-            <h1>Paw Foundation</h1>
+            <h1><i class="fas fa-paw"></i> Paw Foundation</h1>
+            <img src="./resources/images/banner.jpg" alt="">
         </section>
-        <!-- column in Mobilem that opens up for desktop -->
-        <section id="products"></section>
+        <!-- About section -->
+        <section id="about">
+            <h2>Who are we?</h2>
+            <img src="./resources/images/about.jpg" alt="">
+            <p>We are a non profitable organization that is commited to the welfare of companion animals accross the UK; <br>to <strong>rescue</strong>, <strong>re-habilitate</strong> and <strong>re-home</strong> pets who are unwanted and far too often neglected or mistreated and to promote responsible pet ownership through  education.</p>
+        </section>
+        <!-- column in Mobile that opens up for desktop -->
+        <section id="products">
+            <h2>Meet our friend for adoption</h2>
+            <div>
+                <h3>Jamie</h3>
+                <img src="./resources/images/products/jamie1.jpg" alt="Brown fur dog">
+                <p>Jamie has been with us for a full year now. He is very sociable, with both cats and dogs, loves long walks in nature and children. Jamie will constantly engage other pets in play.</p>
+                
+                <a href="#">Adopt Jamie</a>
+            </div>
+            <div>
+                <h3>Misha</h3>
+                <img src="./resources/images/products/misha1.jpg" alt="White cat with brown eyes">
+                <p>Misha is very independent and likes to spend her days in the sun. Loves treats and to snug late in the day. She's been with us for a couple of months now and comes from a city home.</p>
+                <a href="#">Adopt Misha</a>
+            </div>
+            <div>
+                <h3>Marek</h3>
+                <img src="./resources/images/products/marek1.jpg" alt="White husky dog with blue eyes">
+                <p>Shy at first but once Marek feels confident he won't let go of you. Not very treat driven and prefers to play mostly. Marek has lived in the country side mostly and is a bit scared of crowds.</p>
+               
+                <a href="#">Adopt Marek</a>
+            </div>
+            <div>
+                <h3>Amber</h3> 
+                <img src="./resources/images/products/amber1.jpg" alt="Black Pugg dog"> 
+                <p>Amber has spend most her life in cities and loves short walks in the park as she gets tired a bit easely. She is our latest aquisition and suprisingly friendly with everyone.</p>
+               
+                <a href="#">Adopt Amber</a>
+            </div>
+        </section>
         <!-- employeee list that uses flex-shrink / flex-grow -->
-        <section id="employees"></section>
+        <section id="employees">
+                <figure>
+                    <img id=emplImg src="./resources/images/employees/Ricardo.jpg" alt="">
+                    <figcaption id="emplDescrip">Ricardo is one of our founders.</figcaption>
+                </figure>
+                <div class="left"><i class="fas fa-angle-left"></i> Last</div>
+                <div class="right">Next <i class="fas fa-angle-right"></i></div>
+                
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <ul>
+            <li>Contact us</li>
+            <li>Location</li>
+            <li>Copyright</li>
+        </ul>
+        
+    </footer>
 </body>
 </html>
