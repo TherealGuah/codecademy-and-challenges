@@ -10,20 +10,21 @@ let employeeImage = [
 // array to store figcaptions to match the images
 let figCaption = [
     "Michaella is responsible for our reception.",
-    "Sandra is our founder.",
+    "Sandra is also one of our founders.",
     "Tadeusz  is our in-house vet.",
     "Tamara is a volunteer during the week.",
-    "Ricardo is also one of our founders."
+    "Ricardo is  our founder."
 ];
 
 // image object to target its src attribute
 const empImage = document.getElementById('empImg');
-
+const caption = document.getElementById('empCaption');
 // var to establish thge index number of the picture to use
 let index = 0;
 // function that changes the picture to the next in the array
-const changePictureNext = () => {
+const changePicture = () => {
     empImage.setAttribute("src", employeeImage[index]);
+    caption.textContent = figCaption[index];
     index++;
     if (index >= employeeImage.length) {
         index = 0;
@@ -31,21 +32,22 @@ const changePictureNext = () => {
 }
 
 // function that changes the picture to the previous in the array
-const changePicturePrevious = () => {
-    if (index === 0 ) {
-        index = employeeImage.length - 1;
+/* const changePicturePrevious = () => {
+        
         empImage.setAttribute('src', employeeImage[index]);
         index--;
-    } else {
-        empImage.setAttribute('src', )
+        if (index < 0) {
+            index = employeeImage.length - 1;
+        }
     }
     
-}
+}*/
+
 
 // Store Previous and Next elements into Variables
 const nextElement = document.getElementById('right');
-const previousElement = document.getElementById('left');
+//const previousElement = document.getElementById('left');
 
 // event listeners for both elements
-nextElement.addEventListener('click', changePictureNext);
-previousElement.addEventListener('click',changePicturePrevious);
+nextElement.addEventListener('click', changePicture);
+//previousElement.addEventListener('click',changePicture);
