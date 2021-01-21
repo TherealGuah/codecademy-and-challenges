@@ -10,7 +10,10 @@ Exercise from Codecademy.
 
 ## 1. Techs
 
-
++       Javascript
++       GitHub Repository
++       Git Version Control
++       Node.js
 
 ## 2. Objectives
 
