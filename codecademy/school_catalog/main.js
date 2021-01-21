@@ -123,3 +123,36 @@ middle1.newNumberOfStudents = 200;
 console.log(middle1.numberOfStudents);
 middle1.quickFacts();
 */
+
+class HighSchool extends School {
+    constructor(name, numberOfStudents, sportsTeams) {
+        super(name, 'high', numberOfStudents)
+        this._sportsTeams = sportsTeams;
+    }
+    get sportsTeams() {
+        return this._sportsTeams;
+    }
+    set newSportsTeams(newSportsTeams) {
+        if (Array.isArray(newSportsTeams)) {
+            this._sportsTeams = newSportsTeams;
+        } else {
+            console.log('The new Sports Teams list must be presented in a Array format.');
+        }
+    }
+}
+/*
+let high1 = new HighSchool('Hero Academia', 3000, ['Baseball', 'Basketball', 'Volleyball', 'Track and Field']);
+console.log(high1);
+high1.newName = 1;
+high1.newName = 'HiddenLeaf Village High';
+console.log(high1.name);
+high1.newLevel = 'University';
+high1.newLevel = 'middle';
+console.log(high1.level);
+high1.newNumberOfStudents = 4000;
+console.log(high1.numberOfStudents);
+high1.quickFacts();
+high1.newSportsTeams = 'Super duper TEam';
+high1.newSportsTeams = ['FootBall', 'WarHammer 40k', 'Chess'];
+console.log(high1.sportsTeams);
+*/
