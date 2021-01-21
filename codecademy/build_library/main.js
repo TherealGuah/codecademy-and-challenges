@@ -40,7 +40,37 @@ class Media {
         this._ratings.push(rating);
     }
 }
-/* 
+
+// Book Class
+
+class Book extends Media {
+    constructor(author, title,  pages) {
+        super(title);
+        this._author = author;
+        this._pages = pages;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* unit test for Book class
+let media2 = new Book('Herman Jose', 'A minha vida!', 300);
+ console.log(media2);
+ media2.addRating(2);
+ media2.addRating(3.2);
+ media2.addRating(5.1);
+ media2.addRating(1.2);
+console.log(media2.ratings);
+console.log(media2.getAverageRating());
+*/
+/* Unit test for Media
 let media1 = new Media('RoboCop');
 console.log(media1.title);
 console.log(media1.isCheckedOut);
