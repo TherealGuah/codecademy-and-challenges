@@ -13,7 +13,8 @@
 </ol>
 
 ### Media
-...All properties/Getters/Methods to be Inherited by children
+
+All properties/Getters/Methods to be Inherited by children
 
     Properties:
         title (string),
@@ -28,7 +29,8 @@
         .addRating()    
 
 ### Book
-...Unless stated properties/Getters/Methods are Inhereted from Media
+
+Unless stated properties/Getters/Methods are Inhereted from Media
 
     Properties: 
         author (string), // Unique to Book 
@@ -45,7 +47,8 @@
         .addRating() 
 
 ### Movie
-...Unless stated properties/Getters/Methods are Inhereted from Media
+
+Unless stated properties/Getters/Methods are Inhereted from Media
 
     Properties: 
         director (string), // Unique to Movie
@@ -62,7 +65,8 @@
         .addRating()
     
 ### CD
-...Unless stated properties/Getters/Methods are Inhereted from Media
+
+Unless stated properties/Getters/Methods are Inhereted from Media
 
     Properties:
         artist (string), // Unique to CD
