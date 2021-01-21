@@ -12,12 +12,29 @@
     </ul>
 </ol>
 
+### Media
+...All properties/Getters/Methods to be Inherited by children
+
+    Properties:
+        title (string),
+        isCheckedOut (boolean, initially false),
+        ratings (array, initially empty)
+
+    Getters: all properties have getter
+
+    Methods:
+        .getAverageRating(),
+        .toggleCheckOutStatus(),
+        .addRating()    
+
 ### Book
+...Unless stated properties/Getters/Methods are Inhereted from Media
+
     Properties: 
         author (string), // Unique to Book 
-        title (string), 
+        title (string),
         pages (number), // Unique to Book
-        isCheckedOut (boolean, initially false), 
+        isCheckedOut (boolean, initially false),
         ratings (array, initially empty)
 
     Getters: all properties have a getter
@@ -28,6 +45,8 @@
         .addRating() 
 
 ### Movie
+...Unless stated properties/Getters/Methods are Inhereted from Media
+
     Properties: 
         director (string), // Unique to Movie
         title (string),
@@ -43,6 +62,8 @@
         .addRating()
     
 ### CD
+...Unless stated properties/Getters/Methods are Inhereted from Media
+
     Properties:
         artist (string), // Unique to CD
         title (string),
