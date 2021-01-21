@@ -49,6 +49,12 @@ class Book extends Media {
         this._author = author;
         this._pages = pages;
     }
+    get author() {
+        return this._author;
+    }
+    get pages() {
+        return this._pages;
+    }
 }
 
 // Movie class
@@ -58,6 +64,12 @@ class Movie extends Media {
         super(title);
         this._director = director;
         this._runTime = runTime;
+    }
+    get director() {
+        return this._director;
+    }
+    get runTime() {
+        return this._runTime;
     }
 }
 
@@ -69,9 +81,15 @@ class CD extends Media {
         this._artist = artist;
         this._songs = songs;
     }
+    get artist() {
+        return this._artist;
+    }
+    get songs() {
+        return this._songs;
+    }
 }
 
-/* unit test for Movie class
+/* unit test for CD class
 let media4 = new CD('Michael Jackson', 'Thriller', ['Thriller','Bad','Beat it','Black or White']);
  console.log(media4);
  media4.addRating(3.4);
@@ -80,6 +98,8 @@ let media4 = new CD('Michael Jackson', 'Thriller', ['Thriller','Bad','Beat it','
  media4.addRating(2);
 console.log(media4.ratings);
 console.log(media4.getAverageRating());
+console.log(media4.artist);
+console.log(media4.songs);
 */
 
 /* unit test for Movie class
