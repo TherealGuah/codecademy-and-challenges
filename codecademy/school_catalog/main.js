@@ -1,0 +1,4 @@
+// School class
+class School {
+    
+}
