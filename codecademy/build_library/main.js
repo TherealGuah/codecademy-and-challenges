@@ -144,3 +144,15 @@ console.log(media1.isCheckedOut);
 // getAverageRating test
 console.log(media1.getAverageRating());
 */
+
+/*
+let book1 =  new Book('Senrah','100 years from now',235);
+let movie1 = new Movie('Albert Ruah','Bien vennu Marie', 125);
+let cd1 = new CD('Joseph Joestar','It\'s Show Time', ['Give me baby','O\'Right!!','Hamon Overdrive']);
+
+console.log(book1);
+console.log(movie1);
+console.log(cd1);
+*/
+
+
