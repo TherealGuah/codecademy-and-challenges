@@ -51,14 +51,47 @@ class Book extends Media {
     }
 }
 
+// Movie class
 
+class Movie extends Media {
+    constructor(director ,title, runTime) {
+        super(title);
+        this._director = director;
+        this._runTime = runTime;
+    }
+}
 
+// CD class
 
+class CD extends Media {
+    constructor(artist ,title, songs) {
+        super(title);
+        this._artist = artist;
+        this._songs = songs;
+    }
+}
 
+/* unit test for Movie class
+let media4 = new CD('Michael Jackson', 'Thriller', ['Thriller','Bad','Beat it','Black or White']);
+ console.log(media4);
+ media4.addRating(3.4);
+ media4.addRating(4.7);
+ media4.addRating(3.2);
+ media4.addRating(2);
+console.log(media4.ratings);
+console.log(media4.getAverageRating());
+*/
 
-
-
-
+/* unit test for Movie class
+let media3 = new Movie('Quentin Tarantino', 'O senhor BoBo!', 120);
+ console.log(media3);
+ media3.addRating(2.33);
+ media3.addRating(3.7);
+ media3.addRating(5.2);
+ media3.addRating(7);
+console.log(media3.ratings);
+console.log(media3.getAverageRating());
+*/
 
 /* unit test for Book class
 let media2 = new Book('Herman Jose', 'A minha vida!', 300);
@@ -70,6 +103,7 @@ let media2 = new Book('Herman Jose', 'A minha vida!', 300);
 console.log(media2.ratings);
 console.log(media2.getAverageRating());
 */
+
 /* Unit test for Media
 let media1 = new Media('RoboCop');
 console.log(media1.title);
