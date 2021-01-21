@@ -3,11 +3,14 @@
 ## Inheratance Tree
 
  
-1.  Media(parent):
-    2.  Book(child)
-    2.  Movie(child)
-    2.  CD(child)
-
+<ol>
+    <li>Media(Parent)</li>
+    <ul>
+        <li>Book(child)</li>
+        <li>Movie(child)</li>
+        <li>CD(child)</li>
+    </ul>
+</ol>
 
 ### Book
     Properties: 
