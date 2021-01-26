@@ -8,12 +8,18 @@ const pathCharacter = '*';
 class Field {
     constructor(field) {
         this._field = field;
+        this._currLoc = [0,0];
+        this._rows = field.length;
+        this._columns = field[0].length;
+        this._move = '';
     } 
     // getter method
     get field() {
         return this._field;
     }
-// asks  user if he wanst to initiate the game y/n and if invalid request input again.
+
+
+    // asks  user if he wanst to initiate the game y/n and if invalid request input again.
     gameStart() {
         let gameStart = prompt('Hello, welcome to the "Find your Hat" game! Would you like to play? (y/n) ');
         gameStart = String(gameStart);
@@ -26,8 +32,8 @@ class Field {
             this.gameStart();
         }
     }
-// game explanation and rules
-    // story
+    // game explanation and rules
+    // background story
     story() {
         console.log('You were casually walking on your way to a dinner party and wind took your hat...You can see where it went my you need to reach for it. There are several Holes in the way and you can\'t  afford to leave the street and get your feet dirty of mud. To navigate to the hat you need to choose where to go! Choose "r"(right), "l"(left), "d"(down) or "u"(up).');
     }
@@ -38,7 +44,7 @@ class Field {
             if (explanation === 'n') {
                 this.understood();
             } else if(explanation === 'y') {
-                return ;
+                return this.playGame();
             } else {
                 console.log('Invalid input! Please choose "y" to start the game or "n".') 
                 this.understood();
@@ -51,32 +57,67 @@ class Field {
         if (explanation === 'n') {
             this.understood();
         } else if (explanation === 'y') {
-            return ;
+            return this.playGame();
         } else {
             console.log('Invalid input! Please choose "y" to start the game or "n".'); 
             this.understood();
         }
     }
 
-
-// to create a map the user can use aas reference during the game
+    // to create a map the user can use aas reference during the game
     print() {
         this._field.forEach(x => {
             console.log(x.join(''))
         });   
     }
-// prompt user choice
-userChoice() {
-    let direction = prompt('Where would you like to move to? ');
-    direction = String(direction);
+    // test win condition of location
+    winCondition () {
+        
+    }
+    // prompt user choice and validates it
+    prompUser() {
+        // requests user input
+        let dir = prompt('Where would you like to move to? ');
+        
+        //validation
+        switch (dir) {
+            case 'r':
+                dir = String(dir);
+                break;
+                case 'l':
+                    dir = String(dir);
+                    break;
+                case 'l':
+                    dir = String(dir);
+                    break;
+                case 'd':
+                    dir = String(dir);
+                    break;
+                case 'u':
+                    dir = String(dir);
+                    break;
+                default:
+                    console.log('Chose either "u" for up, "d" for down, "r" for right or "l" for left.');
+                    this.prompUser();
+                    break;               
+        }
+        
+        // updating user location
+        this._move = dir;   
+    }
+    
+
+
+
+
+
+    // initiating game with map for user reference and prompting input
+    playGame() {
+        this.print();
+        this.prompUser();
+    }
 }
 
-
-}
-// considering win/loss condition
-let winCondition = false;
-
-// user input and variable to hold the input value
 
 // console.log(direction); // tested
 
