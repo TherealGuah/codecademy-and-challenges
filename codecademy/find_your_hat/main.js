@@ -6,5 +6,5 @@ const fieldCharacter = '░';
 const pathCharacter = '*';
 
 class Field {
-  
+    
 }
