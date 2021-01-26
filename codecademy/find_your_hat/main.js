@@ -12,56 +12,12 @@ class Field {
         this._rows = field.length;
         this._columns = field[0].length;
         this._move = '';
+        this._inGame = true;
+        this._victoryMessage = "Congrats You got your Hat Back!!";
     } 
     // getter method
     get field() {
         return this._field;
-    }
-
-
-    // asks  user if he wanst to initiate the game y/n and if invalid request input again.
-    gameStart() {
-        let gameStart = prompt('Hello, welcome to the "Find your Hat" game! Would you like to play? (y/n) ');
-        gameStart = String(gameStart);
-        if (gameStart === 'n') {
-            console.log('Maybe next time! To restart the game please key in "node main.js" in the console. Have a good day!');
-        } else if (gameStart === 'y') {
-            return this.gameRules();
-        } else {
-            console.log('Invalid input! Please choose "y" to start the game or "n" leave!');
-            this.gameStart();
-        }
-    }
-    // game explanation and rules
-    // background story
-    story() {
-        console.log('You were casually walking on your way to a dinner party and wind took your hat...You can see where it went my you need to reach for it. There are several Holes in the way and you can\'t  afford to leave the street and get your feet dirty of mud. To navigate to the hat you need to choose where to go! Choose "r"(right), "l"(left), "d"(down) or "u"(up).');
-    }
-    understood() {
-        console.log('Choose "r" to move right, "l" to move left, "d" to move down or "u" to move up. Your starting position is represented by the "*" sign');
-        let explanation = prompt('Do you understand the rules? (y/n): ');
-            explanation = String(explanation);
-            if (explanation === 'n') {
-                this.understood();
-            } else if(explanation === 'y') {
-                return this.playGame();
-            } else {
-                console.log('Invalid input! Please choose "y" to start the game or "n".') 
-                this.understood();
-            }
-    }
-    gameRules() {
-        this.story();
-        let explanation = prompt('Do you understand the rules? (y/n): ');
-            explanation = String(explanation);
-        if (explanation === 'n') {
-            this.understood();
-        } else if (explanation === 'y') {
-            return this.playGame();
-        } else {
-            console.log('Invalid input! Please choose "y" to start the game or "n".'); 
-            this.understood();
-        }
     }
 
     // to create a map the user can use aas reference during the game
@@ -70,10 +26,7 @@ class Field {
             console.log(x.join(''))
         });   
     }
-    // test win condition of location
-    winCondition () {
-        
-    }
+    
     // prompt user choice and validates it
     prompUser() {
         // requests user input
@@ -101,20 +54,90 @@ class Field {
                     this.prompUser();
                     break;               
         }
-        
+
         // updating user location
         this._move = dir;   
     }
+
+    // checking if the move is valid
+    validMove() {
+        if (this._move === 'r' && this._currLoc[1] === (this._columns-1)) {
+            return false;
+        } else if (this._move === 'l' && this._currLoc[1] === 0) {
+            return false;
+        } else if (this._move === 'd' && this._currLoc[0] === (this._rows-1)) {
+            return false;
+        } else if (this._move === 'u' && this._currLoc[0] === 0) {
+            return false;
+        } else {
+            return true;
+        } 
+    }
+
+    //moving the position
+    move() {
+        switch (true) {
+            case this._move === 'r' && this.validMove() === true:
+                this._currLoc[1]++;
+                return true;
+            case this._move === 'l' && this.validMove() === true:
+                this._currLoc[1]--;
+                return true;
+            case this._move === 'd' && this.validMove() === true:
+                this._currLoc[0]++;
+                return true;
+            case this._move === 'u' && this.validMove() === true:
+                this._currLoc[0]--;
+                return true;
+            default:
+                return false;
+        }
+    }
     
-
-
-
-
+    // asks  user if he wanst to initiate the game y/n and if invalid request input again.
+    gameStart() {
+        const instructions = '\nNavigate to the hat symbol "^" to win using they keys r(right), l(left), u(up) or d(down).\nAvoid falling down to hole or moving out of the playing field.\nYour position is marked by the "*".'
+        console.log(instructions)
+        let answer = prompt('\nDo you want to play ? Type y(yes) or n(no): ')
+        if (answer === 'y') {
+            return true
+        } else if (answer === 'n') {
+            console.log('Maybe later! if you would like to try again type "node main.js" in the console. Bye!')
+            return false;
+        } else { console.log('Type y or n')}
+    }
 
     // initiating game with map for user reference and prompting input
     playGame() {
-        this.print();
-        this.prompUser();
+        if (this.gameStart() === false) {
+            this._inGame = false;
+        }
+        while (this._inGame === true) {
+            console.log('\n');
+            this.print();
+            this._move = prompt('Where would you like to move to? ');
+            if (this.move()) {
+                const fieldPosition = this._field[this._currLoc[0]][this._currLoc[1]];
+                if (fieldPosition === 'O') {
+                    console.log('Sorry you fell down a hole');
+                    break;
+                } else if (fieldPosition === '^') {
+                    console.log(this._victoryMessage);
+                    break;
+                } else {
+                    this.field[this._currLoc[0]][this._currLoc[1]] = '*';
+                    this._inGame = true;
+                }
+            } else {
+                console.log('Out of bounds move. You lose');
+                break
+            }
+        }
+    }
+
+    // field generator
+    static generateField(height, width) {
+        let field = new Array(height).fill(fieldCharacter);
     }
 }
 
@@ -134,5 +157,5 @@ const myField = new Field([
   //console.log(myField.field);
   //myField.print();
   //myField.userChoice();
-  myField.gameStart();
+  myField.playGame();
 
