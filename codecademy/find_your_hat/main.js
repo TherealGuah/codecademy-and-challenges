@@ -137,14 +137,18 @@ class Field {
 
     // field generator
     static generateField(height,width,percentage) {
+        // creates array of arrays full of 0s
         let field = new Array(height).fill(0).map(element => new Array(width));
+        // changes all the 0's to ░
         for (let i=0; i < field.length; i++) {
             for (let j=0; j < field[i].length; j++) {
             field[i][j] = fieldCharacter;
             }
         }
+        // determines the number of holes needed from the percentage
         const fieldSize = height*width;
         const numOfHoles = Math.floor(fieldSize*(percentage/100));
+// iterates and establishes random height and width locations for holes while the hole count is below or equal the count
         let countHoles = 0;
         while (countHoles <= numOfHoles) {
           const randomRow = Math.floor(Math.random()*height);
@@ -155,7 +159,9 @@ class Field {
           }
 
         }
+        // establishes hat location at random height and random width
         field[Math.floor(Math.random()*height)][Math.floor(Math.random()*width)] = '^';
+        // initial location of character
         field[0][0] = pathCharacter;
         return field;
     }
@@ -165,10 +171,6 @@ class Field {
 
 // testing
 let x = Field.generateField(10,10,20);
-
 let myField = new Field(x);
-
-  
-
 myField.playGame();
 
