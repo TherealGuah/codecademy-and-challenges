@@ -136,26 +136,39 @@ class Field {
     }
 
     // field generator
-    static generateField(height, width) {
-        let field = new Array(height).fill(fieldCharacter);
+    static generateField(height,width,percentage) {
+        let field = new Array(height).fill(0).map(element => new Array(width));
+        for (let i=0; i < field.length; i++) {
+            for (let j=0; j < field[i].length; j++) {
+            field[i][j] = fieldCharacter;
+            }
+        }
+        const fieldSize = height*width;
+        const numOfHoles = Math.floor(fieldSize*(percentage/100));
+        let countHoles = 0;
+        while (countHoles <= numOfHoles) {
+          const randomRow = Math.floor(Math.random()*height);
+          const randomColumn = Math.floor(Math.random()*width);
+          if (field[randomRow][randomColumn] === '░') {
+            field[randomRow][randomColumn] = 'O';
+            countHoles++;
+          }
+
+        }
+        field[Math.floor(Math.random()*height)][Math.floor(Math.random()*width)] = '^';
+        field[0][0] = pathCharacter;
+        return field;
     }
+    
 }
 
 
-// console.log(direction); // tested
-
-
-
-
 // testing
-const myField = new Field([
-    ['*', '░', 'O'],
-    ['░', 'O', '░'],
-    ['░', '^', '░'],
-  ]);
+let x = Field.generateField(10,10,20);
+
+let myField = new Field(x);
+
   
-  //console.log(myField.field);
-  //myField.print();
-  //myField.userChoice();
-  myField.playGame();
+
+myField.playGame();
 
