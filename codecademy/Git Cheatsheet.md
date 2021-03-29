@@ -8,6 +8,8 @@ The following commands are useful in the Git branch workflow.
 + <b>git merge branch_name</b>: Used to join file changes from one branch to another.
 + <b>git branch -d branch_name</b>: Deletes the branch specified.
 + <b>git checkout -b branch_name</b>: creates a new branch and switches to it.
+
+ + <b> git commit -amend (-am) -m "commit_message"</b>: is a convenient way to modify the most recent commit. (https://www.atlassian.com/git/tutorials/rewriting-history#git-commit--amend)
 ---
 A <b>remote</b> is a Git repository that lives outside your Git project folder.
 
