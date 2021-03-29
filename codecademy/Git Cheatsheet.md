@@ -1,6 +1,15 @@
 # Git Cheatsheet
 
-The following commands are useful in the Git branch workflow.
+## Basic commands
+
++ <b>git init</b>: initialises a git repository
++ <b>git add file_name</b>(<b>.</b> to add all modified files): adds file_name from the working directory to the staging area.
++ <b>git status</b>: to see all modied files in working directory and staging area.
++ <b>git diff</b>: to see diferences from the working directory to the staging area.
++ <b>git commit -m "commit_message"</b>: to commit files in the staging area to the repository.
+ + <b> git commit -amend (-am) -m "commit_message"</b>: is a convenient way to modify the most recent commit. (https://www.atlassian.com/git/tutorials/rewriting-history#git-commit--amend)
+
+## The following commands are useful in the Git branch workflow.
 
 + <b>git branch</b>: Lists all a Git project’s branches.
 + <b>git branch branch_name</b>: Creates a new branch.
@@ -8,8 +17,6 @@ The following commands are useful in the Git branch workflow.
 + <b>git merge branch_name</b>: Used to join file changes from one branch to another.
 + <b>git branch -d branch_name</b>: Deletes the branch specified.
 + <b>git checkout -b branch_name</b>: creates a new branch and switches to it.
-
- + <b> git commit -amend (-am) -m "commit_message"</b>: is a convenient way to modify the most recent commit. (https://www.atlassian.com/git/tutorials/rewriting-history#git-commit--amend)
 ---
 A <b>remote</b> is a Git repository that lives outside your Git project folder.
 
