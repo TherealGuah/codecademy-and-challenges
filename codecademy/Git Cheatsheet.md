@@ -14,4 +14,11 @@ A <b>remote</b> is a Git repository that lives outside your Git project folder.
 + <b>git remote -v</b>: Lists a Git project’s remotes.
 + <b>git fetch</b>: Fetches work from the remote into the local copy.
 + <b>git merge origin/master</b>: Merges origin/master into your local branch.
-+ <b>git push origin branch_name</b>: Pushes a local branch to the origin remote.
++ <b>git push origin branch_name</b>: Pushes a local branch to the origin remote.git br
+
+Git workflow: 
++ <b>Fetch/Merge</b> -> update branch with most recent origin changes
++ <b>Commit</b> -> Make changes on branch and commit them
++ <b>Fetch/Merge</b> -> update with most recent changes to prevent merge conflicts
++ <b>git push origin branch_name</b> -> push branch to origin for merge in remote
+
