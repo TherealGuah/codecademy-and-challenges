@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Form Reference Sheet</title>
+    <link rel="stylesheet" href="./resources/styleSheet.css">
+</head>
+    <body>
+        <header>
+            <h1>HTML Form Reference Sheet</h1>
+        </header>
+        <main>
+            <article id="formTags"> 
+                <h2>Form Tags</h2>   
+                <table>
+                    <thead>
+                        <th>Tag</th>
+                        <th>Description</th>
+                        <th>Attributes</th>
+                        <th>Links</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">&lt;form&gt;</span></td>
+                            <td>Wrapper element for the entirety of the form.</td>
+                            <td><a href="#formAttributes">accept-charset / action / autocomplete / method / name / novalidate / rel / target</a></td>
+                            <td rowspan="11">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" target="_blank">MDN</a><br>
+                                <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;input&gt;</span></td>
+                            <td>Input tag is used to collect the users information. Different <span class="code">type</span> attribute values will change the way information is collected.</td>
+                            <td>
+                                <a href="#inputAttributes">value / readonly / disabled / size / maxlength / min / max / multiple / pattern / placeholder / required / step / autofocus / height / width / list / type</a></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;label&gt;</span></td>
+                            <td>Defines a label for several form elements. Useful for screen-reader users as it reads out loud when the inout element comes in focus.</td>
+                            <td> 
+                                <a href="#labelAttributes"> for </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;select&gt;</span></td>
+                            <td>Defines a drop-down list for selection.</td>
+                            <td> 
+                               <a href="#selectAttributes">autocomplete / autofocus / disabled / form / multiple / name / required / size</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;textarea&gt;</span></td>
+                            <td>A multi-line input field is defined.</td>
+                            <td>
+                                <a href="#textareaAttributes">autocapitalize / autocomplete / autofocus / cols / disabled / form / maxlength / minlength / name / placeholder / readonly / required / rows / spellcheck / wrap</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;button&gt;</span></td>
+                            <td>Defines a clickable button.</td>
+                            <td>
+                                <a href="#buttonAttributes">autofocus / autocomplete / disbled / form / formaction / formenctype / formmethod / formnovalidate / formtarget / name/ type / value</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;fieldset&gt;</span></td>
+                            <td>Used to group related data together.</td>
+                            <td>
+                                <a href="#fieldsetAttributes">disabled / form / name</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;legend&gt;</span></td>
+                            <td>Defines the caption for the field set.</td>
+                            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend#Attributes" target="_blank">Includes global attributes</a></td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;datalist&gt;</span></td>
+                            <td>Specifies a list of pre-defined options for the input.</td>
+                            <td>
+                                Contains a set of &lt;option&gt; elements that represent the permissible or recommended options available to choose from within other controls.
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist#Attributes" target="_blank">Includes global attributes.</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;output&gt;</span></td>
+                            <td>Represents the result of a calculation </td>
+                            <td>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output#Attributes" target="_blank">Includes global attributes</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">&lt;options&gt;</span></td>
+                            <td>Used to define an item contained in a &lt;select&gt;, an &lt;optgroup&gt;, or a &lt;datalist&gt; element.</td>
+                            <td>
+                                <a href="#optionsAttributes">disabled / label / selected / value</a>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </article>
+            <!-- <form> attributes -->
+            <article id="formAttributes">
+                <h2>&lt;form&gt; Attributes</h2>
+                <table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                        <th>Reference</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">accept-charset=""</span></td>
+                            <td>specifies the character encodings that are to be used for the form submission.</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_accept_charset.asp" target="_blank">W3Schools
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">action=""</span></td>
+                            <td>Specifies where to send the form-data when a form is submitted</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_action.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">autocomplete=""</span></td>
+                            <td>Set to "on"/"off". The browser "may"/"may not" auto complete the entries.</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_autocomplete.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                            <td><span class="code">method=""</span></td>
+                            <td>Assigns a HTTP verb to the HTTP request.</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_method.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">name=""</span></td>
+                            <td>Specifies the name of the form.</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_name.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">novalidate=""</span></td>
+                            <td>It specifies that the form-data (input) should not be validated when submitted if present.</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_novalidate.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">rel=""</span></td>
+                            <td>Specifies the relationship between the current document and the linked document.</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_rel.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">target=""</span></td>
+                            <td>Specifies where to receive the response that is received after submiting the form.</td>
+                            <td>
+                                <a href="https://www.w3schools.com/tags/att_form_target.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>    
+                    </tbody>
+                </table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <input> attributes -->
+            <article id="inputAttributes">
+                <h2>&lt;input&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">value</span></td>
+                            <td>Specifies an initial value for an input field.</td>
+                            <td rowspan="14">
+                                <a href="https://www.w3schools.com/html/html_form_attributes.asp" target="_blank">W3Schools</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">readonly</span></td>
+                            <td>The value of the input field cannot be changed and will be sent when submitting the form.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">disabled</span></td>
+                            <td>The value of a disabled input field is unusable and un-clickable. This input will not be sent when submitting the form.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">size</span></td>
+                            <td>Defines the visible width, in characters, of the input field.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">maxlength</span></td>
+                            <td>Defines the maximum number f characters allowed in the input field</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">min</span> / <span class="code">max</span></td>
+                            <td>Specifies the minimum/maximum values for the input field. <br>Valid inputs: number, range, date, datetime-local, month, time and week.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">multiple</span></td>
+                            <td>Specifies that a user is allowed to enter more than one value for the input field. <br>Valid inputs: email and file. </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">pattern</span></td>
+                            <td>
+                                Specifies a regular expression that the input field's value is checked against, when the form is submitted. <br>
+                                Use the global <span class="code">title</span> attribute to describe the pattern to help the user. <br>
+                                About <a href="https://www.w3schools.com/js/js_regexp.asp">regular expressions</a>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">placeholder</span></td>
+                            <td>
+                                Specifies short a hint that describes the expected value of an input field. <br>
+                                Valid inputs: text, search, url, tel, email, and password.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">required</span></td>
+                            <td>
+                                Specifies that an input field must be filled out before submitting the form. <br>
+                                Valid inputs: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">step</span></td>
+                            <td>Specifies the legal number intervals for an input field.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">autofocus</span></td>
+                            <td>Specifies that an input field should automatically get focus when the page loads.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">heigth</span> / <span class="code">width</span></td>
+                            <td>Specify the height and width of an <span class="code">&lt;input type="image"&gt;</span> element.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">list</span></td>
+                            <td>Refers to a <span class="code">&lt;datalist&gt;</span> element that contains pre-defined options for an <span class="code">&lt;input&gt;</span> element.</td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <aside id="inputType">
+                <h3>&lt;input type=""&gt; attribute options</h3>
+                <table>
+                    <thead>
+                        <th>Options</th>
+                        <th>Description</th>
+                        <th>Reference</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">text</span></td>
+                            <td>Defines a single-line text input field.</td>
+                            <td rowspan="20">
+                                <a href="https://www.w3schools.com/html/html_form_input_types.asp">W3Schools</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">password</span></td>
+                            <td>Defines a password field</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">submit</span></td>
+                            <td>Defines a button for submitting form data to a form-handler.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">reset</span></td>
+                            <td>Defines a reset button that will reset all form values to their default values</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">radio</span></td>
+                            <td>
+                                Defines a radio button. <br>
+                                Radio buttons let a user select ONLY ONE of a limited number of choices.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">checkbox</span></td>
+                            <td>
+                                Defines a checkbox <br>
+                                Lets select zero or more options of a limited number.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">button</span></td>
+                            <td>Defines a button</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">color</span></td>
+                            <td>
+                                Used for input fields that should contain a color. <br>
+                                Depending on browser support, a color picker can show up in the input field.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">date</span></td>
+                            <td>Used for input fields that should contain a date.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">datetime-local</span></td>
+                            <td>Specifies a date and time input field, with no time zone.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">email</span></td>
+                            <td>Used for input fields that should contain an e-mail address.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">file</span></td>
+                            <td>Defines a file-select field and a "Browse" button for file uploads.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">month</span></td>
+                            <td>Allows the user to select a month and year.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">number</span></td>
+                            <td>Defines a numeric input field.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">range</span></td>
+                            <td>Defines a control for entering a number whose exact value is not important (like a slider control).</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">search</span></td>
+                            <td>Used for search fields.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">tel</span></td>
+                            <td>Used for input fields that should contain a telephone number.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">time</span></td>
+                            <td>Allows the user to select a time (no time zone).</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">url</span></td>
+                            <td>Used for input fields that should contain a URL address.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">week</span></td>
+                            <td>Allows the user to select a week and year.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </aside>   
+            <!-- <label> attributes -->
+            <article id="labelAttributes">
+                <h2>&lt;label&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">for</span></td>
+                            <td>Used to set reference to the input to label.</td>
+                            <td>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#Attributes" target="_blank">MDN.org</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <select> attributes -->
+            <article id="selectAttributes">
+                <h2>&lt;select&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">autocomplete / autofocus / disabled / form / multiple / name / required / size</span></td>
+                            <td>List of attributes. Doesn't include global attributes.</td>
+                            <td>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select#Attributes" target="_blank">MDN.org</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <textarea> attributes -->
+            <article id="textareaAttributes">
+                <h2>&lt;textarea&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">autocapitalize / autocomplete / autofocus / cols / disabled / form / maxlength / minlength / name / placeholder / readonly / required / rows / spellcheck / wrap</span></td>
+                            <td>List of attributes. Doesn't include global attributes.</td>
+                            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#Attributes" target="_blank">MDN.org</a></td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <button> attributes -->
+            <article id="buttonAttributes">
+                <h2>&lt;button&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">autofocus / autocomplete / disbled / form / formaction / formenctype / formmethod / formnovalidate / formtarget / name/ type / value</span></td>
+                            <td>List of attributes. Doesn't include global attributes.</td>
+                            <td>
+                                <a href="http://127.0.0.1:5500/codecademy/cheat_sheet/cheatSheet.html#buttonAttributes" target="_blank">MDN.org</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>    
+            <!-- <fieldset> attributes -->
+            <article id="fieldsetAttributes">
+                <h2>&lt;fieldset&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">disabled / form / name</span></td>
+                            <td>List of attributes. Doesn't include global attributes.</td>
+                            <td>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset#Attributes" target="_blank">MDN.org</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+            <!-- <options> attributes -->
+            <article id="optionsAttributes">
+                <h2>&lt;options&gt; Attributes</h2>
+                <Table>
+                    <thead>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                        <th>Reference</th> 
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">disabled / label / selected / value</span></td>
+                            <td>List of attributes. Doesn't include global attributes.</td>
+                            <td>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option#Attributes" target="_blank">MDN.org</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <p><a href="#formTags">To the Top</a></p>
+            </article>
+        </main>
+        <footer>
+            <p>Date: 3 Jan 2020</p>
+        </footer>
+</body>
+</html>

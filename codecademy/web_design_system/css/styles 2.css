@@ -1,0 +1,182 @@
+/* Universal styles */
+header {
+    background-color: cadetblue;
+    color: cornsilk;
+    padding: 3rem;
+    border-bottom: 1px solid gray;
+}
+body {
+    background-color: whitesmoke;
+}
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Bangers";
+}
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+section {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin: 3rem auto;
+    max-width: 1000px;
+
+}
+section h2 {
+    font-size: 1.5rem;
+    color: rgb(100, 100, 100);
+    margin: 1rem auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-bottom: thin solid gray;
+    font-family: "Noto";
+}
+
+.content {
+    text-align: center;
+    margin: 1rem auto;
+}
+.colorBox {
+    width: 45%; 
+    display: inline-block; 
+    margin: 0.5rem auto;
+    max-width: 175px;
+}
+.colorBox p {
+    margin: 1rem auto;
+}
+
+/* Styles for <section id="colors"> */
+
+.cornsilk {
+    background-color: rgb(255,248,220);
+    color: black;
+    border: 2px solid lightgray;
+}
+.gray {
+    background-color: rgb(100,100,100);
+    color:whitesmoke;
+    border: 2px solid lightgray;
+}
+.cadetblue {
+    background-color: rgb(95,158,160);
+    color: whitesmoke;
+    border: 2px solid lightgray;
+}
+.whitesmoke {
+    background-color: rgb(240, 240, 240);
+    color: black;
+    border: 2px solid lightgray;
+}
+.black {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    border: 2px solid lightgray;
+}
+#colors {
+    background-color: whitesmoke;
+    background-image: url("../images/colors.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* Styles for <section id="fonts"> */
+
+#fonts {
+    background-color: white;
+
+}
+#fonts div {
+    display: inline-block;
+    text-align: center;
+    margin: 1rem;
+    vertical-align: middle;
+}
+#fonts p {
+    margin: 0.5rem auto;
+    text-align: left;
+}
+
+#noto {
+    font-family: "Noto";
+}
+#roboto{
+    font-family: "Roboto";
+}
+#sourceCode {
+    font-family: "Source Code Pro";
+}
+#bangers {
+    font-family: "Bangers";
+}
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+/* Styles for <section id="textstyles"> */
+#textstyles{
+    background-color: white;
+    background-image: url("../images/text_size.jpg");
+    opacity: 0.8;
+    background-position: center;
+    background-size: cover;
+}
+
+#textstyles div {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin: 1rem;
+}
+#textstyles ul {
+    text-align: left;
+    list-style-type: square;
+    margin: 1rem;
+}
+#textstyles p{
+    text-align: left;    
+}
+#textstyles h2 {
+    color:whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+}
+#h1 {
+    font-family: "Bangers";
+    font-size: 2rem;
+}
+#h2 {
+    font-family: "Noto";
+    font-size: 1.5rem;
+}
+#h3 {
+    font-size: 1.3rem;
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: bold;
+}
+#textstyles .content div {
+    background-color: white;
+    padding:1rem;
+    border: 2px solid lightgray;
+    border-radius: 2%;
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(100,100,100);
+    color: rgb(255,248,220);
+    padding: 2rem;
+    font-weight: bold;
+}
+
+footer li {
+    display: inline-block;
+    margin: auto 1.5rem;
+}
