@@ -25,11 +25,11 @@ Individual project with the objective of testing knowledge acquired in the previ
 + PHP and PSR-12 best practices to display and update the data from the database
 
 ### Technologies
-+ DataBase  - Sequel Ace (MySQL) https://sequel-ace.com/ - Follow instructions for download
-+ PHP - https://www.php.net/
-+ HTML5 - https://html.spec.whatwg.org/
-+ CSS3
-+ Git 
++ <img src="https://mpng.subpng.com/20180824/ktx/kisspng-mysql-workbench-computer-icons-logo-portable-netwo-thezedt-tech-tips-and-random-thoughts-5b80352110ca84.1955496015351288650688.jpg" width=50 height="auto">  - Sequel Ace https://sequel-ace.com/ - Follow instructions for download
++ <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2g2OC92LUCv__t3VtkBpexTCTWvcou3x8cw&usqp=CAU" width=50 height="auto"> - https://www.php.net/
++ <img src="https://assets.stickpng.com/images/5847f5bdcef1014c0b5e489c.png" width=25 height="auto"> - https://html.spec.whatwg.org/
++ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/544px-CSS3_logo_and_wordmark.svg.png" width=20 height="auto">
++ <img src="https://banner2.cleanpng.com/20180716/tza/kisspng-github-computer-icons-clip-art-gits-5b4d20ab1f4131.145288281531781291128.jpg" width=25 height="auto"> - https://github.com/
 
 ---
 ## 2. Installation
